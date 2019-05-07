@@ -203,7 +203,7 @@ public class DrawAppPanel extends JPanel
 			}
 		});
 		
-		canvas.addMouseMostionListener(new MouseMotionListener()
+		canvas.addMouseMotionListener(new MouseMotionListener()
 		{
 			public void mouseDragged(MouseEvent e)
 			{
