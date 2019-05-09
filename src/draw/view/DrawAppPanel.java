@@ -219,5 +219,13 @@ public class DrawAppPanel extends JPanel
 				
 			}
 		});
+		
+		save.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.saveImage();
+			}
+		});
 	}
 }
