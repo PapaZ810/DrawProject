@@ -34,7 +34,21 @@ public class DrawPanel extends JPanel
 		this.currentColor = Color.GREEN;
 	}
 	
-	
+	public void setCurrentColor(String color)
+	{
+		if(color.equalsIgnoreCase("Black"))
+		{
+			currentColor = Color.BLACK;
+		}
+		else if(color.equalsIgnoreCase(""))
+		{
+			currentColor = new Color(75, 0, 130);
+		}
+		else
+		{
+			currentColor = randomColor();
+		}
+	}
 	
 	@Override
 	protected void PaintComponent(Graphics graphics)
