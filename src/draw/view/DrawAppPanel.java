@@ -47,7 +47,7 @@ public class DrawAppPanel extends JPanel
 		this.app = app;
 		canvas = new DrawPanel(app);
 		
-		colorPanel = new JPanel(new GridLayout(0,1));
+		colorPanel = new JPanel(new GridLayout(0, 1));
 		menuPanel = new JPanel(new GridLayout(0, 1));
 		
 		canvasPane = new JScrollPane();
@@ -121,7 +121,10 @@ public class DrawAppPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
-		this.setPreferredSize(new Dimension());
+		this.setPreferredSize(new Dimension(500, 400));
+		this.setBackground(Color.DARK_GRAY);
+		this.add(colorPanel);
+		this.add(menuPanel);
 	}
 	
 	private void setupMenuPanels()

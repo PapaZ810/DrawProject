@@ -9,6 +9,8 @@ public class DrawFrame extends JFrame
 	
 	private DrawController app;
 	private DrawAppPanel pane;
+	private DrawPanel fPane;
+	private JSplitPane splitPane;
 	
 	public DrawFrame(DrawController app)
 	{
@@ -16,15 +18,25 @@ public class DrawFrame extends JFrame
 		
 		this.app = app;
 		pane = new DrawAppPanel(app);
+		fPane = new DrawPanel(app);
+		
+		splitPane = new JSplitPane();
 		
 		setupFrame();
+		setupSplitPane();
 	}
 	
 	private void setupFrame()
 	{
 		this.setSize(1000, 800);
-		this.setContentPane(pane);
+		this.setContentPane(splitPane);
 		this.setResizable(false);
 		this.setVisible(true);
+	}
+	
+	private void setupSplitPane()
+	{
+		splitPane.add(pane);
+		splitPane.add(fPane);
 	}
 }
